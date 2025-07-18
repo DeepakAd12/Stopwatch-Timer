@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer & Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="mode-selector">
+            <button id="countdownModeBtn" class="active">Countdown</button>
+            <button id="stopwatchModeBtn">Stopwatch</button>
+        </div>
+
+        <div id="countdownPanel" class="panel active">
+            <h2>Countdown Timer</h2>
+            <div class="time-input">
+                <input type="number" id="hoursInput" min="0" value="0" placeholder="HH"> :
+                <input type="number" id="minutesInput" min="0" value="0" placeholder="MM"> :
+                <input type="number" id="secondsInput" min="0" value="0" placeholder="SS">
+            </div>
+            <div class="display" id="countdownDisplay">00:00:00</div>
+            <div class="controls">
+                <button id="startCountdown">Start</button>
+                <button id="pauseCountdown">Pause</button>
+                <button id="resetCountdown">Reset</button>
+            </div>
+        </div>
+
+        <div id="stopwatchPanel" class="panel">
+            <h2>Stopwatch</h2>
+            <div class="display" id="stopwatchDisplay">00:00:00</div>
+            <div class="controls">
+                <button id="startStopwatch">Start</button>
+                <button id="pauseStopwatch">Pause</button>
+                <button id="resetStopwatch">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

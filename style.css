@@ -1,0 +1,165 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+}
+
+.mode-selector {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.mode-selector button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #e0e0e0;
+    color: #555;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mode-selector button.active {
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.mode-selector button:hover:not(.active) {
+    background-color: #d0d0d0;
+}
+
+.panel {
+    display: none; /* Hidden by default */
+}
+
+.panel.active {
+    display: block; /* Shown when active */
+}
+
+h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.display {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    letter-spacing: 2px;
+}
+
+.time-input {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.time-input input {
+    width: 70px;
+    padding: 10px 5px;
+    font-size: 2rem;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    -moz-appearance: textfield; /* Hide arrows in Firefox */
+}
+
+.time-input input::-webkit-outer-spin-button,
+.time-input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.time-input input:focus {
+    border-color: #007bff;
+}
+
+.controls button {
+    padding: 12px 25px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#startCountdown, #startStopwatch {
+    background-color: #28a745;
+    color: white;
+}
+
+#startCountdown:hover, #startStopwatch:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+#pauseCountdown, #pauseStopwatch {
+    background-color: #ffc107;
+    color: #333;
+}
+
+#pauseCountdown:hover, #pauseStopwatch:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+#resetCountdown, #resetStopwatch {
+    background-color: #dc3545;
+    color: white;
+}
+
+#resetCountdown:hover, #resetStopwatch:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .display {
+        font-size: 2.5rem;
+    }
+
+    .time-input input {
+        width: 60px;
+        font-size: 1.8rem;
+    }
+
+    .controls button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+}
